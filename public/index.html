@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+	<title>APP RESTfull</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+
+
+</head>
+<body ng-controller="appCtrl">
+
+	<div class="container">
+	<h1> Contact List </h1>
+		<table class="table">
+			<thead>
+				<tr>
+					<th>Name</th>
+					<th>Email</th>
+					<th>Phone</th>
+					<th>Action<th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr> 
+					<td><input type="text"  required="" placeholder="Your name" class="form-control" ng-model="newcontact.nome"></td>
+					<td><input type="text" placeholder="example@email.com" class="form-control" ng-model="newcontact.email"></td>
+					<td><input type="text" placeholder="Phone" class="form-control" ng-model="newcontact.fone"></td>
+					<td><button class="btn btn-primary" ng-click="addContact()">Add Contact</button></td>
+					<td><button class="btn btn-info" ng-click="updateContact()">Update</button></td>
+					<td><button class="btn btn-info" ng-click="cleanerContact()">Cleaner</button></td>
+				<tr>
+				<tr ng-repeat=" list in contact">
+					<td>{{list.nome}}</td>
+					<td>{{list.email}}</td>
+					<td>{{list.fone}}</td>
+					<td><button class="btn btn-danger" ng-click="removeContact(list.id)">Remove</button></td>
+					<td><button class="btn btn-warning" ng-click="editContact(list.id)">Edit</button></td>
+				</tr>
+			</tbody>
+		</table>
+		
+	</div>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+<script type="text/javascript" src="controller/controller.js"></script>
+
+</body>
+</html>
