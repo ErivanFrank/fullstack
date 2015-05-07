@@ -10,9 +10,9 @@ app.use(bodyParser.json());
 var connection = mysql.createConnection({
 
     host: '127.12.103.2',
-    user: 'admin3TDXADp', 
-    password: '2zPDw2A-GMyZ',
-    database: 'fullstack'
+    user: 'adminu5MYRZe', 
+    password: 'HiRdWbUUCREj',
+    database: 'fullstack2'
 
 });
 
